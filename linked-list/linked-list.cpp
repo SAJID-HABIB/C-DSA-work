@@ -153,7 +153,7 @@ int main()
   ll.insert(4, 0);
 
   ll.printLL();
-  cout << ll.search(3) << endl;
+  cout << ll.search(5) << endl;
 
   return 0;
 }

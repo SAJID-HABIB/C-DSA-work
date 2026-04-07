@@ -11,7 +11,7 @@ int main()
   cin >> sn;
 
   Student *shead = NULL;
-  Student *stemp = NULL;
+  Student *stail = NULL;
 
   for (int i = 0; i < sn; i++)
   {
@@ -31,20 +31,20 @@ int main()
     if (shead == NULL)
     {
       shead = newStudent;
-      stemp = shead;
+      stail = shead;
     } else {
-      stemp->nextNode = newStudent;
-      stemp = newStudent;
+      stail->nextNode = newStudent;
+      stail = newStudent;
     }
     
   }
 cout << "\n-------stunent list--------\n";
-shead = shead;
+// shead = shead;
 
-while (stemp != NULL)
+while (stail != NULL)
 {
-  stemp->display();
-  stemp = stemp->nextNode;
+  stail->display();
+  stail = stail->nextNode;
 }
 
 //===========number list ==========
@@ -54,7 +54,7 @@ cout <<  "\nHow many numbers? ";
 cin >> nn;
 
 Number* nhead = NULL;
-Number*ntemp = NULL;
+Number* ntail = NULL;
 
 for (int i = 0; i < nn; i++)
 {
@@ -66,21 +66,21 @@ for (int i = 0; i < nn; i++)
 
   if (nhead == NULL)
   {
-    nhead = newNode;
-    ntemp = nhead;
+    nhead  = ntail = newNode;
+    temp = nhead;
   } else {
-    ntemp->nextNode = newNode;
-    ntemp = newNode;
+    temp->nextNode = newNode;
+    temp = newNode;
   }
   
 }
 
 cout << "\n ------- number list ------\n";
-ntemp = nhead;
-while (ntemp != NULL)
+temp = nhead;
+while (temp != NULL)
 {
-  ntemp->display();
-  ntemp = ntemp->nextNode;
+  temp->display();
+  temp = temp->nextNode;
 }
 
 // cout << " NULL" << endl;

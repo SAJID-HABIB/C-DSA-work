@@ -5,10 +5,8 @@ using namespace std;
 
 class LinkedList
 {
-  private:
-  Node* head;
-
 public:
+ Node* head;
   LinkedList() {
     head = nullptr;
   }
@@ -144,6 +142,47 @@ public:
   }
 
   // Loop check
-  
+  bool dleteLoop() {
+    Node* slow = head;
+    Node* fast = head;
+    while (fast != nullptr && fast->next != nullptr)
+    {
+      slow = slow->next;
+      fast = fast->next->next;
+      if (slow == fast)
+      {
+        return true;
+      }
+      
+    }
+    return false;
+    
+  }
+  //  Merge the two Sorted Lists
+  //  Node* mergeSorted(Node* l1, Node* l2){
+  //   Node dummy(0);
+  //   Node* tail = &dummy;
+  //   while (l1 != nullptr && l2 != nullptr)
+  //   {
+  //     if (l1->data < l2->data)
+  //     {
+  //       tail->next = l1;
+  //       l1 = l1->next;
+  //     } else {
+  //       tail->next= l2;
+  //       l2 = l2->next;
+  //     }
+  //     tail = tail->next;
+  //   }
+  //   if (l1 != nullptr)
+  //   {
+  //     tail->next = l1;
+  //   }
+  //   if (l2 != nullptr)
+  //   {
+  //     tail->next;
+  //   }
+  //   return dummy.next;
+  // }
 };
 

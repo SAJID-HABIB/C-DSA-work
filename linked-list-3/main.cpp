@@ -39,4 +39,6 @@ int main() {
   list.findMidle();
   list.printList();
 
+  cout<< "Loop Exists :"<< (list.dleteLoop() ? "yes" : "No")<< endl;
+
 }

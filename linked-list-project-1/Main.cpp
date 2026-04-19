@@ -55,6 +55,7 @@ cin >> nn;
 
 Number* nhead = NULL;
 Number* ntail = NULL;
+Number* temp = NULL;
 
 for (int i = 0; i < nn; i++)
 {

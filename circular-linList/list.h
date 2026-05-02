@@ -1,19 +1,9 @@
 #pragma once
 #include <iostream>
+#include "node.h"
 using namespace std;
 
-// insert at the hesd
-class Node
-{
-public:
-  int data;
-  Node* next;
-  
-  Node(int val) {
-    data = val;
-    next = NULL;
-  }
-};
+// insert at the head
 
 class circularList
 {
@@ -26,8 +16,8 @@ public:
   void insertAtHead(int val){
     Node* newNode = new Node(val);
     if (tail == NULL)
-    {
-      head = tail = newNode;
+  {
+        head = tail = newNode;
       tail->next = head;
       // head = newNode;
     } else
@@ -104,9 +94,7 @@ void deleteAtTail() {
 
     temp->next = NULL;
     delete temp;
-  }
-  
-  
+  } 
 }
 };
 
